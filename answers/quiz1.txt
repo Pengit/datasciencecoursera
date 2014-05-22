@@ -1,0 +1,28 @@
+data <- read.csv("hw1_data.csv")
+
+Question 16
+How many missing values are in the Ozone column of this data frame?
+ans:
+sum(!complete.cases(data["Ozone"]))
+
+Question 17
+What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation.
+ans: 
+pdata <- data[complete.cases(data),]
+mean(pdata[,][,"Ozone"])
+
+
+Question 18
+Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+ans: 
+mean(pdata[pdata[["Ozone"]]>31 & pdata[["Temp"]]>90,][,"Solar.R"])
+
+Question 19
+What is the mean of "Temp" when "Month" is equal to 6? 
+ans: 
+mean(data[data[["Month"]]==6,][,"Temp"])
+
+Question 20
+What was the maximum ozone value in the month of May (i.e. Month = 5)?
+ans: 
+max(pdata[pdata[["Month"]]==5,][,"Ozone"])
