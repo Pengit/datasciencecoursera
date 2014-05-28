@@ -1,3 +1,5 @@
+## R programming assignment 1
+
 complete <- function(directory, id = 1:332) {
     ## 'directory' is a character vector of length 1 indicating
     ## the location of the CSV files
